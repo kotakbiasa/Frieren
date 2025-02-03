@@ -6,8 +6,8 @@ import dotenv
 import requests
 from git import Repo
 
-if os.path.exists("MissKatyLogs.txt"):
-    with open("MissKatyLogs.txt", "r+") as f:
+if os.path.exists("FrierenLogs.txt"):
+    with open("FrierenLogs.txt", "r+") as f:
         f.truncate(0)
 
 basicConfig(
@@ -16,13 +16,13 @@ basicConfig(
     datefmt="%d-%b-%y %H:%M:%S",
     handlers=[
         handlers.RotatingFileHandler(
-            "MissKatyLogs.txt", mode="w+", maxBytes=5242880, backupCount=1
+            "FrierenLogs.txt", mode="w+", maxBytes=5242880, backupCount=1
         ),
         StreamHandler(),
     ],
 )
 
-LOGGER = getLogger("MissKaty")
+LOGGER = getLogger("Frieren")
 
 ENV_URL = os.environ.get("ENV_URL")
 try:
