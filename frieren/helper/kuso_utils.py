@@ -11,7 +11,7 @@ from frieren import BOT_USERNAME
 from frieren.helper.http import fetch
 from frieren.helper.media_helper import post_to_telegraph
 
-LOGGER = logging.getLogger("MissKaty")
+LOGGER = logging.getLogger("Frieren)
 
 
 async def kusonimeBypass(url: str):

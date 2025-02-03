@@ -3,7 +3,7 @@ from datetime import datetime
 import pytz
 
 from database import dbname
-from misskaty.vars import SUDO, OWNER_ID
+from frieren.vars import SUDO, OWNER_ID
 
 fedsdb = dbname["federation"]
 
