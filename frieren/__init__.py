@@ -16,7 +16,7 @@ from pymongo import MongoClient
 from pyrogram import Client
 from web.webserver import api
 
-from misskaty.vars import (
+from frieren.vars import (
     API_HASH,
     API_ID,
     BOT_TOKEN,
@@ -33,7 +33,7 @@ basicConfig(
     datefmt="%d-%b-%y %H:%M:%S",
     handlers=[
         handlers.RotatingFileHandler(
-            "MissKatyLogs.txt", mode="w+", maxBytes=5242880, backupCount=1
+            "FrierenLogs.txt", mode="w+", maxBytes=5242880, backupCount=1
         ),
         StreamHandler(),
     ],
@@ -48,34 +48,34 @@ MOD_NOLOAD = ["subscene_dl"]
 HELPABLE = {}
 cleanmode = {}
 botStartTime = time.time()
-misskaty_version = "v2.16.1"
+frieren_version = "v2.16.1"
 
 uvloop.install()
 faulthandler_enable()
-from misskaty.core import misskaty_patch
+from frieren.core import frieren_patch
 
 # Pyrogram Bot Client
 app = Client(
-    "MissKatyBot",
+    "FrierenJourneyBot",
     api_id=API_ID,
     api_hash=API_HASH,
     bot_token=BOT_TOKEN,
     mongodb=dict(connection=AsyncClient(DATABASE_URI), remove_peers=True),
     sleep_threshold=180,
-    app_version="MissKatyPyro Stable",
+    app_version="FrierenPyro Stable",
     workers=50,
     max_concurrent_transmissions=4,
 )
 app.db = AsyncClient(DATABASE_URI)
-app.log = getLogger("MissKaty")
+app.log = getLogger("Frieren")
 
 # Pyrogram UserBot Client
 user = Client(
-    "YasirUBot",
+    "KotakUBot",
     session_string=USER_SESSION,
     mongodb=dict(connection=AsyncClient(DATABASE_URI), remove_peers=False),
     sleep_threshold=180,
-    app_version="MissKaty Ubot",
+    app_version="Frieren Ubot",
 )
 
 jobstores = {

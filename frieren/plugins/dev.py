@@ -54,15 +54,15 @@ from pyrogram.types import (
 
 from database.gban_db import add_gban_user, is_gbanned_user, remove_gban_user
 from database.users_chats_db import db
-from misskaty import BOT_NAME, app, botStartTime, misskaty_version, user
-from misskaty.core.decorator import new_task
-from misskaty.helper.eval_helper import format_exception, meval
-from misskaty.helper.functions import extract_user, extract_user_and_reason
-from misskaty.helper.http import fetch
-from misskaty.helper.human_read import get_readable_file_size, get_readable_time
-from misskaty.helper.localization import use_chat_lang
+from frieren import BOT_NAME, app, botStartTime, frieren_version, user
+from frieren.core.decorator import new_task
+from frieren.helper.eval_helper import format_exception, meval
+from frieren.helper.functions import extract_user, extract_user_and_reason
+from frieren.helper.http import fetch
+from frieren.helper.human_read import get_readable_file_size, get_readable_time
+from frieren.helper.localization import use_chat_lang
 from database.payment_db import autopay_update
-from misskaty.vars import AUTO_RESTART, COMMAND_HANDLER, LOG_CHANNEL, SUDO, OWNER_ID, PAYDISINI_CHANNEL_ID, PAYDISINI_KEY
+from frieren.vars import AUTO_RESTART, COMMAND_HANDLER, LOG_CHANNEL, SUDO, OWNER_ID, PAYDISINI_CHANNEL_ID, PAYDISINI_KEY
 
 __MODULE__ = "DevCommand"
 __HELP__ = """
@@ -86,7 +86,7 @@ __HELP__ = """
 
 var = {}
 teskode = {}
-LOGGER = getLogger("MissKaty")
+LOGGER = getLogger("Frieren")
 
 
 async def edit_or_reply(self, msg, **kwargs):
@@ -106,7 +106,7 @@ async def star_donation(self: Client, ctx: Message):
     amount = ctx.command[1] if len(ctx.command) == 2 and ctx.command[1].isdigit() else 5
     await self.send_invoice(
         ctx.chat.id,
-        title="MissKaty Donate",
+        title="Frieren Donate",
         description="You can give me donation via star",
         currency="XTR",
         prices=[LabeledPrice(label="Donation", amount=amount)],
@@ -151,16 +151,16 @@ async def log_file(_, ctx: Message, strings):
     msg = await ctx.reply_msg("<b>Reading bot logs ...</b>", quote=True)
     if len(ctx.command) == 1:
         try:
-            with open("MissKatyLogs.txt", "r") as file:
+            with open("FrierenLogs.txt", "r") as file:
                 content = file.read()
             pastelog = await privatebinapi.send_async("https://bin.yasirweb.eu.org", text=content, expiration="1week", formatting="syntaxhighlighting")
             await msg.edit_msg(
-                f"<a href='{pastelog['full_url']}'>Here the Logs</a>\nlog size: {get_readable_file_size(os.path.getsize('MissKatyLogs.txt'))}"
+                f"<a href='{pastelog['full_url']}'>Here the Logs</a>\nlog size: {get_readable_file_size(os.path.getsize('FrierenLogs.txt'))}"
             )
         except Exception:
             await ctx.reply_document(
-                "MissKatyLogs.txt",
-                caption="Log Bot MissKatyPyro",
+                "FrierenLogs.txt",
+                caption="Log Bot FrierenPyro",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -175,12 +175,12 @@ async def log_file(_, ctx: Message, strings):
             await msg.delete_msg()
     elif len(ctx.command) == 2:
         val = ctx.text.split()
-        tail = await shell_exec(f"tail -n {val[1]} -v MissKatyLogs.txt")
+        tail = await shell_exec(f"tail -n {val[1]} -v FrierenLogs.txt")
         try:
             await msg.edit_msg(f"<pre language='bash'>{html.escape(tail[0])}</pre>")
         except MessageTooLong:
             with io.BytesIO(str.encode(tail[0])) as s:
-                s.name = "MissKatyLog-Tail.txt"
+                s.name = "FrierenLog-Tail.txt"
                 await ctx.reply_document(s)
             await msg.delete()
     else:
@@ -201,7 +201,7 @@ async def payment(client: Client, message: Message):
         'unique_code': unique_id,
         'service': service_id,
         'amount': amount,
-        'note': f'MissKaty Support by YS Dev',
+        'note': f'Frieren Support by Kotak Dev',
         'valid_time': valid_time,
         'type_fee': '1',
         'payment_guide': True,
@@ -285,7 +285,7 @@ async def server_stats(_, ctx: Message) -> "Message":
 
     neofetch = (await shell_exec("neofetch --stdout"))[0]
 
-    caption = f"<b>{BOT_NAME} {misskaty_version} is Up and Running successfully.</b>\n\n<code>{neofetch}</code>\n\n**OS Uptime:** <code>{osuptime}</code>\n<b>Bot Uptime:</b> <code>{currentTime}</code>\n**Bot Usage:** <code>{botusage}</code>\n\n**Total Space:** <code>{disk_total}</code>\n**Free Space:** <code>{disk_free}</code>\n\n**Download:** <code>{download}</code>\n**Upload:** <code>{upload}</code>\n\n<b>PyroFork Version</b>: <code>{pyrover}</code>\n<b>Python Version</b>: <code>{sys.version_info[0]}.{sys.version_info[1]}.{sys.version_info[2]} {sys.version_info[3].title()}</code>"
+    caption = f"<b>{BOT_NAME} {frieren_version} is Up and Running successfully.</b>\n\n<code>{neofetch}</code>\n\n**OS Uptime:** <code>{osuptime}</code>\n<b>Bot Uptime:</b> <code>{currentTime}</code>\n**Bot Usage:** <code>{botusage}</code>\n\n**Total Space:** <code>{disk_total}</code>\n**Free Space:** <code>{disk_free}</code>\n\n**Download:** <code>{download}</code>\n**Upload:** <code>{upload}</code>\n\n<b>PyroFork Version</b>: <code>{pyrover}</code>\n<b>Python Version</b>: <code>{sys.version_info[0]}.{sys.version_info[1]}.{sys.version_info[2]} {sys.version_info[3].title()}</code>"
 
     if "oracle" in platform.uname().release:
         return await ctx.reply_msg(caption, quote=True)
@@ -609,7 +609,7 @@ async def cmd_eval(self: Client, ctx: Message, strings) -> Optional[str]:
     final_output = f"{prefix}<b>INPUT:</b>\n<pre language='python'>{html.escape(code)}</pre>\n<b>OUTPUT:</b>\n<pre language='python'>{html.escape(out)}</pre>\nExecuted Time: {el_str}"
     if len(final_output) > 4096:
         with io.BytesIO(str.encode(out)) as out_file:
-            out_file.name = "MissKatyEval.txt"
+            out_file.name = "FrierenEval.txt"
             await ctx.reply_document(
                 document=out_file,
                 caption=f"<code>{code[: 4096 // 4 - 1]}</code>",
@@ -658,7 +658,7 @@ async def update_restart(_, ctx: Message, strings):
     await shell_exec("python3 update.py")
     with open("restart.pickle", "wb") as status:
         pickle.dump([ctx.chat.id, msg.id], status)
-    os.execvp(sys.executable, [sys.executable, "-m", "misskaty"])
+    os.execvp(sys.executable, [sys.executable, "-m", "frieren"])
 
 
 @app.on_error(errors=(FloodWait, RPCError, SlowmodeWait))
@@ -706,10 +706,11 @@ async def shell_exec(code, treat=True):
 
 async def auto_restart():
     await shell_exec("python3 update.py")
-    os.execvp(sys.executable, [sys.executable, "-m", "misskaty"])
+    os.execvp(sys.executable, [sys.executable, "-m", "frieren"])
 
 
 if AUTO_RESTART:
     scheduler = AsyncIOScheduler(timezone="Asia/Jakarta")
     scheduler.add_job(auto_restart, trigger="interval", days=3)
     scheduler.start()
+```

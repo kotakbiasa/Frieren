@@ -11,10 +11,10 @@ from pyrogram import enums, filters
 from pyrogram.errors import PeerIdInvalid, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from misskaty import app
-from misskaty.core.decorator.errors import capture_err
-from misskaty.core.decorator.permissions import admins_in_chat
-from misskaty.helper.time_gap import check_time_gap
+from frieren import app
+from frieren.core.decorator.errors import capture_err
+from frieren.core.decorator.permissions import admins_in_chat
+from frieren.helper.time_gap import check_time_gap
 from utils import temp
 
 from .pypi_search import PYPI_DICT

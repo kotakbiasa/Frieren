@@ -16,10 +16,10 @@ from pyrogram.types import (
     Message,
 )
 
-from misskaty import BOT_NAME, BOT_USERNAME, HELPABLE, app
-from misskaty.helper import bot_sys_stats, paginate_modules
-from misskaty.helper.localization import use_chat_lang
-from misskaty.vars import COMMAND_HANDLER
+from frieren import BOT_NAME, BOT_USERNAME, HELPABLE, app
+from frieren.helper import bot_sys_stats, paginate_modules
+from frieren.helper.localization import use_chat_lang
+from frieren.vars import COMMAND_HANDLER
 
 home_keyboard_pm = InlineKeyboardMarkup(
     [
@@ -27,7 +27,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
             InlineKeyboardButton(text="Commands ❓", callback_data="bot_commands"),
             InlineKeyboardButton(
                 text="Source Code 🛠",
-                url="https://github.com/yasirarism/MissKatyPyro",
+                url="https://github.com/kotakbiasa/Frieren",
             ),
         ],
         [
@@ -35,7 +35,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
                 text="System Stats 🖥",
                 callback_data="stats_callback",
             ),
-            InlineKeyboardButton(text="Dev 👨", url="https://t.me/YasirArisM"),
+            InlineKeyboardButton(text="Dev 👨", url="https://t.me/KotakBiasa"),
         ],
         [
             InlineKeyboardButton(
@@ -54,7 +54,7 @@ keyboard = InlineKeyboardMarkup(
             InlineKeyboardButton(text="Help ❓", url=f"t.me/{BOT_USERNAME}?start=help"),
             InlineKeyboardButton(
                 text="Source Code �",
-                url="https://github.com/yasirarism/MissKatyPyro",
+                url="https://github.com/kotakbiasa/Frieren",
             ),
         ],
         [
@@ -62,7 +62,7 @@ keyboard = InlineKeyboardMarkup(
                 text="System Stats 💻",
                 callback_data="stats_callback",
             ),
-            InlineKeyboardButton(text="Dev 👨", url="https://t.me/YasirArisM"),
+            InlineKeyboardButton(text="Dev 👨", url="https://t.me/KotakBiasa"),
         ],
     ]
 )
@@ -227,7 +227,7 @@ Send command /privacy if you want know data collected by this bot.
 If you want give coffee to my owner you can send /donate command for more info.
 """.format(
             first_name=name,
-            bot_name="MissKaty",
+            bot_name="Frieren",
         ),
         keyb,
     )

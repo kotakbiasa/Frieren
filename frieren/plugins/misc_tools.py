@@ -37,14 +37,14 @@ from pyrogram.types import (
     Message,
 )
 
-from misskaty import BOT_USERNAME, app
-from misskaty.core.decorator.errors import capture_err
-from misskaty.helper.http import fetch
-from misskaty.helper.tools import gen_trans_image, rentry
-from misskaty.vars import COMMAND_HANDLER
+from frieren import BOT_USERNAME, app
+from frieren.core.decorator.errors import capture_err
+from frieren.helper.http import fetch
+from frieren.helper.tools import gen_trans_image, rentry
+from frieren.vars import COMMAND_HANDLER
 from utils import extract_user, get_file_id
 
-LOGGER = getLogger("MissKaty")
+LOGGER = getLogger("Frieren")
 
 __MODULE__ = "Misc"
 __HELP__ = """

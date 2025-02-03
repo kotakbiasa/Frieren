@@ -18,13 +18,13 @@ from pyrogram.types import ChatMemberUpdated, InlineKeyboardButton, InlineKeyboa
 
 from database.greetings_db import is_welcome, toggle_welcome
 from database.users_chats_db import db
-from misskaty import BOT_USERNAME, app
-from misskaty.core.decorator import asyncify, capture_err
-from misskaty.helper import fetch, use_chat_lang
-from misskaty.vars import COMMAND_HANDLER, SUPPORT_CHAT, OWNER_ID
+from frieren import BOT_USERNAME, app
+from frieren.core.decorator import asyncify, capture_err
+from frieren.helper import fetch, use_chat_lang
+from frieren.vars import COMMAND_HANDLER, SUPPORT_CHAT, OWNER_ID
 from utils import temp
 
-LOGGER = getLogger("MissKaty")
+LOGGER = getLogger("Frieren")
 
 
 def circle(pfp, size=(215, 215)):

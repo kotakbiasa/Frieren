@@ -9,7 +9,7 @@ from os import environ
 
 import dotenv
 
-LOGGER = getLogger("MissKaty")
+LOGGER = getLogger("Frieren")
 
 dotenv.load_dotenv("config.env", override=True)
 
@@ -48,7 +48,7 @@ else:
 # Optional ENV
 LOG_GROUP_ID = environ.get("LOG_GROUP_ID")
 USER_SESSION = environ.get("USER_SESSION")
-DATABASE_NAME = environ.get("DATABASE_NAME", "MissKatyDB")
+DATABASE_NAME = environ.get("DATABASE_NAME", "FrierenDB")
 TZ = environ.get("TZ", "Asia/Jakarta")
 PORT = environ.get("PORT", 80)
 COMMAND_HANDLER = environ.get("COMMAND_HANDLER", "! /").split()

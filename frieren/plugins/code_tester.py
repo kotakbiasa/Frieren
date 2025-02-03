@@ -2,9 +2,9 @@ import aiohttp
 from pyrogram import enums, filters
 from pyrogram.errors import MessageTooLong
 
-from misskaty import app
-from misskaty.helper.tools import rentry
-from misskaty.vars import COMMAND_HANDLER
+from frieren import app
+from frieren.helper.tools import rentry
+from frieren.vars import COMMAND_HANDLER
 
 __MODULE__ = "CodeTester"
 __HELP__ = """
@@ -62,7 +62,7 @@ async def listcode():
 
 async def glot(lang, langcode, code):
     async with aiohttp.ClientSession() as session:
-        data = {"files": [{"name": f"misskaty.{langcode}", "content": code}]}
+        data = {"files": [{"name": f"frieren.{langcode}", "content": code}]}
         headers = {
             "content-type": "application/json",
             "Authorization": "Token b8a2b75a-a078-4089-869c-e53d448b1ebb",

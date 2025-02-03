@@ -10,10 +10,10 @@ from pyrogram import filters
 from pyrogram.errors import MessageTooLong, QueryIdInvalid
 from pyrogram.types import CallbackQuery, Message
 
-from misskaty import app
-from misskaty.helper import Cache, fetch, post_to_telegraph
-from misskaty.plugins.web_scraper import split_arr
-from misskaty.vars import COMMAND_HANDLER
+from frieren import app
+from frieren.helper import Cache, fetch, post_to_telegraph
+from frieren.plugins.web_scraper import split_arr
+from frieren.vars import COMMAND_HANDLER
 
 PYPI_DICT = Cache(filename="pypi_cache.db", path="cache", in_memory=False)
 

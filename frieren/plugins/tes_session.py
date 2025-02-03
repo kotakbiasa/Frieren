@@ -1,7 +1,7 @@
 # This plugin to learn session using pyrogram
 from pyrogram.types import Message
 
-from misskaty import app
+from frieren import app
 
 
 @app.on_cmd("session")

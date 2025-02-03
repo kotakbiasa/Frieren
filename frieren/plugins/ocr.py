@@ -11,10 +11,10 @@ from pyrogram import filters
 from pyrogram.types import Message
 from telegraph.aio import Telegraph
 
-from misskaty import app
-from misskaty.core.decorator.errors import capture_err
-from misskaty.helper import fetch, use_chat_lang
-from misskaty.vars import COMMAND_HANDLER
+from frieren import app
+from frieren.core.decorator.errors import capture_err
+from frieren.helper import fetch, use_chat_lang
+from frieren.vars import COMMAND_HANDLER
 
 __MODULE__ = "OCR"
 __HELP__ = "/ocr [reply to photo] - Read Text From Image"

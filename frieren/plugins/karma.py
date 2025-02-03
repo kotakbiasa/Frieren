@@ -10,10 +10,10 @@ from database.karma_db import (
     karma_on,
     update_karma,
 )
-from misskaty import app
-from misskaty.core.decorator.errors import capture_err
-from misskaty.core.decorator.permissions import adminsOnly
-from misskaty.helper.functions import alpha_to_int, int_to_alpha
+from frieren import app
+from frieren.core.decorator.errors import capture_err
+from frieren.core.decorator.permissions import adminsOnly
+from frieren.helper.functions import alpha_to_int, int_to_alpha
 
 __MODULE__ = "Karma"
 __HELP__ = """

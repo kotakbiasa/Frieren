@@ -19,13 +19,13 @@ from pyrogram.file_id import FileId
 from pyrogram.types import Message
 from pySmartDL import SmartDL
 
-from misskaty import app
-from misskaty.core.decorator import new_task
-from misskaty.helper import is_url, progress_for_pyrogram, take_ss
-from misskaty.helper.localization import use_chat_lang
-from misskaty.helper.pyro_progress import humanbytes
+from frieren import app
+from frieren.core.decorator import new_task
+from frieren.helper import is_url, progress_for_pyrogram, take_ss
+from frieren.helper.localization import use_chat_lang
+from frieren.helper.pyro_progress import humanbytes
 
-LOGGER = getLogger("MissKaty")
+LOGGER = getLogger("Frieren")
 
 __MODULE__ = "MediaTool"
 __HELP__ = """"

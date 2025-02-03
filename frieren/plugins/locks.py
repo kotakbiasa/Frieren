@@ -29,13 +29,13 @@ from pyrogram import filters
 from pyrogram.errors import ChatAdminRequired, ChatNotModified, FloodWait
 from pyrogram.types import ChatPermissions
 
-from misskaty import app
-from misskaty.core.decorator.errors import capture_err
-from misskaty.core.decorator.permissions import adminsOnly, list_admins
-from misskaty.helper.functions import get_urls_from_text
-from misskaty.vars import COMMAND_HANDLER, SUDO, OWNER_ID
+from frieren import app
+from frieren.core.decorator.errors import capture_err
+from frieren.core.decorator.permissions import adminsOnly, list_admins
+from frieren.helper.functions import get_urls_from_text
+from frieren.vars import COMMAND_HANDLER, SUDO, OWNER_ID
 
-LOGGER = getLogger("MissKaty")
+LOGGER = getLogger("Frieren")
 
 __MODULE__ = "Locks"
 __HELP__ = """

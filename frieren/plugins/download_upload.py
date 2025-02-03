@@ -18,13 +18,13 @@ from pyrogram.file_id import FileId
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pySmartDL import SmartDL
 
-from misskaty import app
-from misskaty.core.decorator import capture_err, new_task
-from misskaty.helper.http import fetch
-from misskaty.helper.pyro_progress import humanbytes, progress_for_pyrogram
-from misskaty.vars import COMMAND_HANDLER, OWNER_ID
+from frieren import app
+from frieren.core.decorator import capture_err, new_task
+from frieren.helper.http import fetch
+from frieren.helper.pyro_progress import humanbytes, progress_for_pyrogram
+from frieren.vars import COMMAND_HANDLER, OWNER_ID
 
-LOGGER = getLogger("MissKaty")
+LOGGER = getLogger("Frieren")
 
 __MODULE__ = "Download/Upload"
 __HELP__ = """

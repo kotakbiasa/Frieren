@@ -2,9 +2,9 @@ from pyrogram import enums, filters
 from pyrogram.errors import UserIsBlocked, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from misskaty import BOT_USERNAME, app
-from misskaty.core.decorator.errors import capture_err
-from misskaty.vars import COMMAND_HANDLER
+from frieren import BOT_USERNAME, app
+from frieren.core.decorator.errors import capture_err
+from frieren.vars import COMMAND_HANDLER
 
 
 @app.on_message(filters.command(["copy"], COMMAND_HANDLER))

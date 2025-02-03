@@ -15,9 +15,9 @@ from pyrogram import __version__ as pyrover
 from pyrogram import filters
 from pyrogram.types import Message
 
-from misskaty import app, botStartTime, misskaty_version
-from misskaty.helper.human_read import get_readable_time
-from misskaty.vars import COMMAND_HANDLER
+from frieren import app, botStartTime, frieren_version
+from frieren.helper.human_read import get_readable_time
+from frieren.vars import COMMAND_HANDLER
 
 PING_LOCK = Lock()
 
@@ -30,7 +30,7 @@ async def ping(_, ctx: Message):
     end_t = time.time()
     time_taken_s = round(end_t - start_t, 3)
     await rm.edit_msg(
-        f"<b>🐈 MissKatyBot {misskaty_version} based Pyrogram {pyrover} Online.</b>\n\n<b>Ping:</b> <code>{time_taken_s} detik</code>\n<b>Uptime:</b> <code>{currentTime}</code>\n<b>Python Version:</b> <code>{platform.python_version()}</code>"
+        f"<b>🐈 FrierenBot {frierens_version} based Pyrogram {pyrover} Online.</b>\n\n<b>Ping:</b> <code>{time_taken_s} detik</code>\n<b>Uptime:</b> <code>{currentTime}</code>\n<b>Python Version:</b> <code>{platform.python_version()}</code>"
     )
 
 
@@ -59,7 +59,7 @@ async def ping_handler(_, ctx: Message):
                     "time=", ""
                 )
 
-                text += f"    **{dc.upper()}:** {resp_time} ✅\n"
+                text += f"    **{dc.upper()}: {resp_time} ✅\n"
             except Exception:
                 # There's a cross emoji here, but it's invisible.
                 text += f"    **{dc.upper}:** ❌\n"

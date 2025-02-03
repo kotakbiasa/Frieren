@@ -24,13 +24,13 @@ from pyrogram.types import (
     Message,
 )
 
-from misskaty import app
-from misskaty.core import pyro_cooldown
-from misskaty.core.decorator import capture_err, new_task
-from misskaty.helper import fetch, isValidURL, use_chat_lang
-from misskaty.vars import COMMAND_HANDLER, LOG_CHANNEL, SUDO, OWNER_ID
+from frieren import app
+from frieren.core import pyro_cooldown
+from frieren.core.decorator import capture_err, new_task
+from frieren.helper import fetch, isValidURL, use_chat_lang
+from frieren.vars import COMMAND_HANDLER, LOG_CHANNEL, SUDO, OWNER_ID
 
-LOGGER = getLogger("MissKaty")
+LOGGER = getLogger("Frieren")
 YT_REGEX = r"^(https?://)?(www\.)?(youtube|youtu|youtube-nocookie)\.(com|be)/(watch\?v=|embed/|v/|.+\?v=)?(?P<id>[A-Za-z0-9\-=_]{11})"
 YT_DB = {}
 

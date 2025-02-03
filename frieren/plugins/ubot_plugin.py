@@ -18,7 +18,7 @@ from pyrogram.types import (
     Message,
 )
 
-from misskaty import app, user
+from frieren import app, user
 
 f = filters.chat([])
 

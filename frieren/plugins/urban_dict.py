@@ -1,8 +1,8 @@
 from pykeyboard import InlineKeyboard
 from pyrogram.types import CallbackQuery, Message
 
-from misskaty import app
-from misskaty.helper.http import fetch
+from frieren import app
+from frieren.helper.http import fetch
 
 
 async def getData(chat_id, message_id, GetWord, CurrentPage):

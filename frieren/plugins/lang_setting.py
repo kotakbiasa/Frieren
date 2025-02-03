@@ -12,8 +12,8 @@ from pyrogram.types import (
 )
 
 from database.locale_db import set_db_lang
-from misskaty import app
-from misskaty.vars import COMMAND_HANDLER
+from frieren import app
+from frieren.vars import COMMAND_HANDLER
 
 from ..core.decorator.permissions import require_admin
 from ..helper.localization import (

@@ -7,10 +7,10 @@ from PIL import Image, ImageDraw, ImageFont
 from pyrogram import filters
 from pyrogram.errors import MessageIdInvalid, PeerIdInvalid, ReactionInvalid, ListenerTimeout
 
-from misskaty import app, user
-from misskaty.core.decorator.errors import capture_err
-from misskaty.helper import use_chat_lang, fetch
-from misskaty.vars import COMMAND_HANDLER, SUDO, OWNER_ID
+from frieren import app, user
+from frieren.core.decorator.errors import capture_err
+from frieren.helper import use_chat_lang, fetch
+from frieren.vars import COMMAND_HANDLER, SUDO, OWNER_ID
 
 
 __MODULE__ = "Fun"

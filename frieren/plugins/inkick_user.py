@@ -9,11 +9,11 @@ from pyrogram.errors.exceptions.bad_request_400 import (
 )
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 
-from misskaty import app
-from misskaty.vars import COMMAND_HANDLER
+from frieren import app
+from frieren.vars import COMMAND_HANDLER
 
 __MODULE__ = "Inkick"
-__HELP__ = """"
+__HELP__ = """" 
 /instatus - View member status in group.
 /ban_ghosts - Remove deleted account from group.
 """

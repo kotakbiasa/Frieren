@@ -8,9 +8,9 @@ from asyncio import gather
 from pyrogram.types import Message
 from pySmartDL import SmartDL
 
-from misskaty import app
-from misskaty.core.decorator import new_task
-from misskaty.helper.localization import use_chat_lang
+from frieren import app
+from frieren.core.decorator import new_task
+from frieren.helper.localization import use_chat_lang
 
 __MODULE__ = "WebSS"
 __HELP__ = """

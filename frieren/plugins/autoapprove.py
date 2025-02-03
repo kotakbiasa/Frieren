@@ -8,9 +8,9 @@ from pyrogram.types import (
 )
 
 from database import dbname
-from misskaty import app
-from misskaty.core.decorator.permissions import adminsOnly, member_permissions
-from misskaty.vars import COMMAND_HANDLER, SUDO, OWNER_ID
+from frieren import app
+from frieren.core.decorator.permissions import adminsOnly, member_permissions
+from frieren.vars import COMMAND_HANDLER, SUDO, OWNER_ID
 
 approvaldb = dbname["autoapprove"]
 

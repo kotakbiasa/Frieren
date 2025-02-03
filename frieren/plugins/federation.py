@@ -32,10 +32,10 @@ from pyrogram.errors import FloodWait, PeerIdInvalid
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from database.feds_db import *
-from misskaty import BOT_ID, app
-from misskaty.core.decorator.errors import capture_err
-from misskaty.helper.functions import extract_user, extract_user_and_reason
-from misskaty.vars import COMMAND_HANDLER, LOG_GROUP_ID, SUDO, OWNER_ID
+from frieren import BOT_ID, app
+from frieren.core.decorator.errors import capture_err
+from frieren.helper.functions import extract_user, extract_user_and_reason
+from frieren.vars import COMMAND_HANDLER, LOG_GROUP_ID, SUDO, OWNER_ID
 
 __MODULE__ = "Federation"
 __HELP__ = """

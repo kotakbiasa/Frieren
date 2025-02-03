@@ -9,7 +9,7 @@ import os
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from misskaty import app
+from frieren import app
 
 
 # View Structure Telegram Message As JSON

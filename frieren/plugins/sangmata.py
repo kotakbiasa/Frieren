@@ -13,10 +13,10 @@ from database.sangmata_db import (
     sangmata_off,
     sangmata_on,
 )
-from misskaty import app
-from misskaty.core.decorator.permissions import adminsOnly
-from misskaty.helper.localization import use_chat_lang
-from misskaty.vars import COMMAND_HANDLER
+from frieren import app
+from frieren.core.decorator.permissions import adminsOnly
+from frieren.helper.localization import use_chat_lang
+from frieren.vars import COMMAND_HANDLER
 
 __MODULE__ = "SangMata"
 __HELP__ = """"
@@ -48,7 +48,7 @@ async def cek_mataa(_, ctx: Message, strings):
         or first_name != ctx.from_user.first_name
         or lastname_before != ctx.from_user.last_name
     ):
-        msg += f"👀 <b>Mata MissKaty</b>\n\n🌞 User: {ctx.from_user.mention} [<code>{ctx.from_user.id}</code>]\n"
+        msg += f"👀 <b>Mata Frieren</b>\n\n🌞 User: {ctx.from_user.mention} [<code>{ctx.from_user.id}</code>]\n"
     if usernamebefore != ctx.from_user.username:
         usernamebefore = f"@{usernamebefore}" if usernamebefore else strings("no_uname")
         usernameafter = (

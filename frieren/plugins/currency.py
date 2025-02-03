@@ -6,16 +6,16 @@ import logging
 
 from pyrogram.types import Message
 
-from misskaty import app
-from misskaty.helper.http import fetch
-from misskaty.vars import CURRENCY_API
+from frieren import app
+from frieren.helper.http import fetch
+from frieren.vars import CURRENCY_API
 
 __MODULE__ = "Currency"
 __HELP__ = """
 /currency - Send structure message Telegram in JSON using Pyrogram Style.
 """
 
-LOGGER = logging.getLogger("MissKaty")
+LOGGER = logging.getLogger("Friereen")
 
 
 @app.on_cmd("currency")

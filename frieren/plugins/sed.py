@@ -8,7 +8,7 @@ from pyrogram import Client, filters
 from pyrogram.errors import MessageEmpty
 from pyrogram.types import Message
 
-from misskaty import app
+from frieren import app
 
 
 @app.on_message(filters.regex(r"^s/(.+)?/(.+)?(/.+)?") & filters.reply)

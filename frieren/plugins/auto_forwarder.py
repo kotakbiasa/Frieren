@@ -6,8 +6,8 @@ from pyrogram import filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 
-from misskaty import user
-from misskaty.vars import (
+from frieren import user
+from frieren.vars import (
     BLOCK_FILES_WITHOUT_EXTENSIONS,
     BLOCKED_EXTENSIONS,
     FORWARD_FILTERS,
@@ -16,7 +16,7 @@ from misskaty.vars import (
     MINIMUM_FILE_SIZE,
 )
 
-LOGGER = getLogger("MissKaty")
+LOGGER = getLogger("Frieren")
 
 
 async def FilterMessage(message: Message):

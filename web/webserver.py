@@ -21,7 +21,7 @@ basicConfig(
     datefmt="%d-%b-%y %H:%M:%S",
     handlers=[
         handlers.RotatingFileHandler(
-            "MissKatyLogs.txt", mode="w+", maxBytes=5242880, backupCount=1
+            "FrierenLogs.txt", mode="w+", maxBytes=5242880, backupCount=1
         ),
         StreamHandler(),
     ],
@@ -33,9 +33,9 @@ getLogger("fastapi").setLevel(ERROR)
 
 @api.post("/callback")
 async def autopay(request: Request):
-    from misskaty import app
+    from frieren import app
     from database.payment_db import delete_autopay, get_autopay
-    from misskaty.vars import PAYDISINI_KEY, OWNER_ID
+    from frieren.vars import PAYDISINI_KEY, OWNER_ID
     data = await request.form()
     client_ip = request.client.host
     if PAYDISINI_KEY != data["key"] and client_ip != "194.233.92.170":
@@ -48,7 +48,7 @@ async def autopay(request: Request):
     status = data['status']
     exp_date = (datetime.now(zones("Asia/Jakarta")) + timedelta(days=30)).strftime("%Y-%m-%d %H:%M:%S")
     r = await get_autopay(unique_code)
-    msg = f"╭────〔 <b>TRANSAKSI SUKSES🎉</b> 〕──\n│・ <b>Transaksi ID :</b> {unique_code}\n│・ <b>Product :</b> MissKaty Support by YS Dev\n│・ <b>Durasi :</b> 30 hari\n│・ <b>Total Dibayar :</b> {r.get('amount')}\n│・ Langganan Berakhir: {exp_date}\n╰─────────"
+    msg = f"╭────〔 <b>TRANSAKSI SUKSES🎉</b> 〕──\n│・ <b>Transaksi ID :</b> {unique_code}\n│・ <b>Product :</b> Frieren Support by YS Dev\n│・ <b>Durasi :</b> 30 hari\n│・ <b>Total Dibayar :</b> {r.get('amount')}\n│・ Langganan Berakhir: {exp_date}\n╰─────────"
     if not r:
         return JSONResponse({"status": false, "data": "Data not found on DB"}, 404)
     if status == "Success":
@@ -67,7 +67,7 @@ async def autopay(request: Request):
 
 @api.get("/status")
 async def status():
-    from misskaty.helper.human_read import get_readable_file_size, get_readable_time
+    from frieren.helper.human_read import get_readable_file_size, get_readable_time
     bot_uptime = get_readable_time(time() - botStartTime)
     uptime = get_readable_time(time() - boot_time())
     sent = get_readable_file_size(net_io_counters().bytes_sent)

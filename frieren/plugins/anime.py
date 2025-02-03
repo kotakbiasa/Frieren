@@ -5,9 +5,9 @@ import aiohttp
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from misskaty import app
-from misskaty.helper.human_read import get_readable_time
-from misskaty.vars import COMMAND_HANDLER
+from frieren import app
+from frieren.helper.human_read import get_readable_time
+from frieren.vars import COMMAND_HANDLER
 
 anime_query = """
 query ($id: Int, $idMal: Int, $search: String) {

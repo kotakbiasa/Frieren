@@ -20,8 +20,8 @@ from pyrogram.errors import QueryIdInvalid
 from pyrogram.types import Message
 
 from database import dbname
-from misskaty import app
-from misskaty.helper import Cache, Kusonime, fetch, post_to_telegraph, use_chat_lang
+from frieren import app
+from frieren.helper import Cache, Kusonime, fetch, post_to_telegraph, use_chat_lang
 
 __MODULE__ = "WebScraper"
 __HELP__ = """
@@ -38,7 +38,7 @@ __HELP__ = """
 /nodrakor [query <optional>] - Scrape website data from NoDrakor
 """
 
-LOGGER = logging.getLogger("MissKaty")
+LOGGER = logging.getLogger("Frieren")
 SCRAP_DICT = Cache(filename="scraper_cache.db", path="cache", in_memory=False)
 data_kuso = Cache(filename="kuso_cache.db", path="cache", in_memory=False)
 savedict = TTLCache(maxsize=1000, ttl=3600)

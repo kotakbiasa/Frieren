@@ -21,11 +21,11 @@ from pyrogram.errors import (
 from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboardMarkup
 
 from database.locale_db import get_db_lang
-from misskaty import BOT_NAME, app, scheduler
-from misskaty.core.decorator import permissions
-from misskaty.core.decorator.permissions import require_admin
-from misskaty.helper.localization import langdict, use_chat_lang
-from misskaty.vars import COMMAND_HANDLER, LOG_CHANNEL, TZ
+from frieren import BOT_NAME, app, scheduler
+from frieren.core.decorator import permissions
+from frieren.core.decorator.permissions import require_admin
+from frieren.helper.localization import langdict, use_chat_lang
+from frieren.vars import COMMAND_HANDLER, LOG_CHANNEL, TZ
 
 __MODULE__ = "NightMode"
 __HELP__ = """<b>Enable or disable nightmode (locks the chat at specified intervals everyday)</b>

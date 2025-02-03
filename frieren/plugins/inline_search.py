@@ -25,11 +25,11 @@ from pyrogram.types import (
     InputTextMessageContent,
 )
 
-from misskaty import BOT_USERNAME, app, user
-from misskaty.helper import GENRES_EMOJI, fetch, post_to_telegraph, search_jw
-from misskaty.plugins.dev import shell_exec
-from misskaty.plugins.misc_tools import calc_btn
-from misskaty.vars import USER_SESSION
+from frieren import BOT_USERNAME, app, user
+from frieren.helper import GENRES_EMOJI, fetch, post_to_telegraph, search_jw
+from frieren.plugins.dev import shell_exec
+from frieren.plugins.misc_tools import calc_btn
+from frieren.vars import USER_SESSION
 from utils import demoji
 
 __MODULE__ = "InlineFeature"
@@ -45,7 +45,7 @@ To use this feature, just type bot username with following args below.
 keywords_list = ["imdb", "pypi", "git", "google", "secretmsg", "info", "botapi"]
 
 PRVT_MSGS = {}
-LOGGER = getLogger("MissKaty")
+LOGGER = getLogger("Frieren")
 
 
 @app.on_inline_query()
@@ -69,7 +69,7 @@ async def inline_menu(self, inline_query: InlineQuery):
         )
 
         msg = f"""
-**[MissKaty✨](https://github.com/yasirarism):**
+**[Frieren✨](https://github.com/yasirarism):**
 **MainBot Stats:** `{bot_state}`
 **UserBot Stats:** `{ubot_state}`
 **Python:** `{pyver.split()[0]}`
@@ -94,7 +94,7 @@ async def inline_menu(self, inline_query: InlineQuery):
                 title="Github Repo",
                 description="Github Repo of This Bot.",
                 input_message_content=InputTextMessageContent(
-                    f"<b>Github Repo @{BOT_USERNAME}</b>\n\nhttps://github.com/yasirarism/MissKatyPyro"
+                    f"<b>Github Repo @{BOT_USERNAME}</b>\n\nhttps://github.com/kotakbiasa/Frieren"
                 ),
                 thumb_url="https://hamker.me/gjc9fo3.png",
             ),

@@ -12,10 +12,10 @@ from pyrogram import filters
 from pyrogram.errors import MessageTooLong
 from pyrogram.types import Message
 
-from misskaty import app
-from misskaty.core import pyro_cooldown
-from misskaty.helper import check_time_gap, post_to_telegraph, use_chat_lang
-from misskaty.vars import COMMAND_HANDLER, GOOGLEAI_KEY, OPENAI_KEY, OWNER_ID, SUDO
+from frieren import app
+from frieren.core import pyro_cooldown
+from frieren.helper import check_time_gap, post_to_telegraph, use_chat_lang
+from frieren.vars import COMMAND_HANDLER, GOOGLEAI_KEY, OPENAI_KEY, OWNER_ID, SUDO
 
 __MODULE__ = "ChatBot"
 __HELP__ = """

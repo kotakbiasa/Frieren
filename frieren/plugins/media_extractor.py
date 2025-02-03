@@ -23,16 +23,16 @@ from pyrogram.types import (
     Message,
 )
 
-from misskaty import app
-from misskaty.core.decorator.errors import capture_err
-from misskaty.helper.human_read import get_readable_time
-from misskaty.helper.localization import use_chat_lang
-from misskaty.helper.pyro_progress import progress_for_pyrogram
-from misskaty.helper.tools import get_random_string
-from misskaty.plugins.dev import shell_exec
-from misskaty.vars import COMMAND_HANDLER
+from frieren import app
+from frieren.core.decorator.errors import capture_err
+from frieren.helper.human_read import get_readable_time
+from frieren.helper.localization import use_chat_lang
+from frieren.helper.pyro_progress import progress_for_pyrogram
+from frieren.helper.tools import get_random_string
+from frieren.plugins.dev import shell_exec
+from frieren.vars import COMMAND_HANDLER
 
-LOGGER = getLogger("MissKaty")
+LOGGER = getLogger("Frieren")
 
 ARCH_EXT = (
     "mkv",

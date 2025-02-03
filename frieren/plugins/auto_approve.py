@@ -9,8 +9,8 @@ from pyrogram import filters
 from pyrogram.errors import UserAlreadyParticipant, UserIsBlocked
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from misskaty import app
-from misskaty.core.decorator.errors import capture_err
+from frieren import app
+from frieren.core.decorator.errors import capture_err
 
 
 # Filters Approve User by bot in channel @YMovieZNew

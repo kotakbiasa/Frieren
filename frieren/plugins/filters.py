@@ -34,12 +34,12 @@ from database.filters_db import (
     get_filters_names,
     save_filter,
 )
-from misskaty import app
-from misskaty.core.decorator.errors import capture_err
-from misskaty.core.decorator.permissions import adminsOnly, member_permissions
-from misskaty.core.keyboard import ikb
-from misskaty.helper.functions import extract_text_and_keyb, extract_urls
-from misskaty.vars import COMMAND_HANDLER
+from frieren import app
+from frieren.core.decorator.errors import capture_err
+from frieren.core.decorator.permissions import adminsOnly, member_permissions
+from frieren.core.keyboard import ikb
+from frieren.helper.functions import extract_text_and_keyb, extract_urls
+from frieren.vars import COMMAND_HANDLER
 
 __MODULE__ = "Filters"
 __HELP__ = """/filters To Get All The Filters In The Chat.

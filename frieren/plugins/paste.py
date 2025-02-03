@@ -12,9 +12,9 @@ from re import compile as compiles
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from misskaty import app
-from misskaty.helper import fetch, post_to_telegraph, rentry
-from misskaty.vars import COMMAND_HANDLER
+from frieren import app
+from frieren.helper import fetch, post_to_telegraph, rentry
+from frieren.vars import COMMAND_HANDLER
 
 __MODULE__ = "Paste"
 __HELP__ = """
@@ -97,7 +97,7 @@ async def telegraph_paste(_, message):
         title = (
             message.text.split(None, 1)[1]
             if len(message.command) > 1
-            else "MissKaty Paste"
+            else "Frieren Paste"
         )
         try:
             with open(file, "r") as text:
@@ -113,13 +113,13 @@ async def telegraph_paste(_, message):
         title = (
             message.text.split(None, 1)[1]
             if len(message.command) > 1
-            else "MissKaty Paste"
+            else "Frieren Paste"
         )
         data = reply.text.html.replace("\n", "<br>") or reply.caption.html.replace(
             "\n", "<br>"
         )
     elif not reply and len(message.command) >= 2:
-        title = "MissKaty Paste"
+        title = "Frieren Paste"
         data = message.text.split(None, 1)[1]
 
     try:

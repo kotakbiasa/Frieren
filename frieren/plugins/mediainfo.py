@@ -15,11 +15,11 @@ from pyrogram import filters
 from pyrogram.file_id import FileId
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from misskaty import app
-from misskaty.helper import post_to_telegraph, progress_for_pyrogram, runcmd
-from misskaty.helper.localization import use_chat_lang
-from misskaty.helper.mediainfo_paste import mediainfo_paste
-from misskaty.vars import COMMAND_HANDLER
+from frieren import app
+from frieren.helper import post_to_telegraph, progress_for_pyrogram, runcmd
+from frieren.helper.localization import use_chat_lang
+from frieren.helper.mediainfo_paste import mediainfo_paste
+from frieren.vars import COMMAND_HANDLER
 from utils import get_file_id
 
 
@@ -53,7 +53,7 @@ async def mediainfo(_, ctx: Message, strings):
         output_ = await runcmd(f'mediainfo "{file_path}"')
         out = output_[0] if len(output_) != 0 else None
         body_text = f"""
-MissKatyBot MediaInfo
+FrierenBot MediaInfo
 JSON
 <pre>{file_info}.type</pre>
     
@@ -61,14 +61,14 @@ DETAILS
 <pre>{out or 'Not Supported'}</pre>
     """
         try:
-            link = await mediainfo_paste(out, "MissKaty Mediainfo")
+            link = await mediainfo_paste(out, "Frieren Mediainfo")
             markup = InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text=strings("viweb"), url=link)]]
             )
         except:
             try:
                 link = await post_to_telegraph(
-                    False, "MissKaty MediaInfo", f"<code>{body_text}</code>"
+                    False, "Frieren MediaInfo", f"<code>{body_text}</code>"
                 )
                 markup = InlineKeyboardMarkup(
                     [[InlineKeyboardButton(text=strings("viweb"), url=link)]]
@@ -76,7 +76,7 @@ DETAILS
             except:
                 markup = None
         with io.BytesIO(str.encode(body_text)) as out_file:
-            out_file.name = "MissKaty_Mediainfo.txt"
+            out_file.name = "Frieren_Mediainfo.txt"
             await ctx.reply_document(
                 out_file,
                 caption=strings("capt_media").format(
@@ -103,19 +103,19 @@ DETAILS
             except Exception:
                 return await process.edit_msg(strings("err_link"))
             body_text = f"""
-            MissKatyBot MediaInfo
+            FrierenJourneyBot MediaInfo
             <pre>{output}</pre>
             """
             # link = await post_to_telegraph(False, title, body_text)
             try:
-                link = await mediainfo_paste(output, "MissKaty Mediainfo")
+                link = await mediainfo_paste(output, "Frieren Mediainfo")
                 markup = InlineKeyboardMarkup(
                     [[InlineKeyboardButton(text=strings("viweb"), url=link)]]
                 )
             except:
                 try:
                     link = await post_to_telegraph(
-                        False, "MissKaty MediaInfo", body_text
+                        False, "Frieren MediaInfo", body_text
                     )
                     markup = InlineKeyboardMarkup(
                         [[InlineKeyboardButton(text=strings("viweb"), url=link)]]
@@ -123,7 +123,7 @@ DETAILS
                 except:
                     markup = None
             with io.BytesIO(str.encode(output)) as out_file:
-                out_file.name = "MissKaty_Mediainfo.txt"
+                out_file.name = "Frieren_Mediainfo.txt"
                 await ctx.reply_document(
                     out_file,
                     caption=strings("capt_media").format(

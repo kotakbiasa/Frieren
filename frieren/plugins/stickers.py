@@ -27,9 +27,9 @@ from pyrogram.raw.types import (
 )
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from misskaty import app
-from misskaty.helper import fetch, use_chat_lang
-from misskaty.vars import COMMAND_HANDLER, LOG_CHANNEL
+from frieren import app
+from frieren.helper import fetch, use_chat_lang
+from frieren.vars import COMMAND_HANDLER, LOG_CHANNEL
 
 __MODULE__ = "Stickers"
 __HELP__ = """

@@ -7,8 +7,8 @@ import os
 from PIL import Image, ImageDraw, ImageFont
 from pyrogram import filters
 
-from misskaty import app
-from misskaty.vars import COMMAND_HANDLER
+from frieren import app
+from frieren.vars import COMMAND_HANDLER
 
 __MODULE__ = "nulis"
 __HELP__ = """

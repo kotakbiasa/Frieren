@@ -16,7 +16,7 @@ from pyrogram import __version__, idle
 from pyrogram.raw.all import layer
 
 from database import dbname
-from misskaty import (
+from frieren import (
     BOT_NAME,
     BOT_USERNAME,
     HELPABLE,
@@ -26,18 +26,18 @@ from misskaty import (
     scheduler,
     run_wsgi
 )
-from misskaty.plugins import ALL_MODULES
-from misskaty.plugins.web_scraper import web
-from misskaty.vars import OWNER_ID, USER_SESSION
+from frieren.plugins import ALL_MODULES
+from frieren.plugins.web_scraper import web
+from frieren.vars import OWNER_ID, USER_SESSION
 from utils import auto_clean
 
-LOGGER = getLogger("MissKaty")
+LOGGER = getLogger("Frieren")
 
 
 # Run Bot
 async def start_bot():
     for module in ALL_MODULES:
-        imported_module = importlib.import_module(f"misskaty.plugins.{module}")
+        imported_module = importlib.import_module(f"frieren.plugins.{module}")
         if hasattr(imported_module, "__MODULE__") and imported_module.__MODULE__:
             imported_module.__MODULE__ = imported_module.__MODULE__
             if hasattr(imported_module, "__HELP__") and imported_module.__HELP__:
@@ -52,7 +52,7 @@ async def start_bot():
             bot_modules += "|{:<15}".format(i)
         j += 1
     LOGGER.info("+===============================================================+")
-    LOGGER.info("|                        MissKatyPyro                           |")
+    LOGGER.info("|                        Frieren                           |")
     LOGGER.info("+===============+===============+===============+===============+")
     LOGGER.info(bot_modules)
     LOGGER.info("+===============+===============+===============+===============+")

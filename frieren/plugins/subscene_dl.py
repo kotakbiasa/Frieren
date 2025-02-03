@@ -12,13 +12,13 @@ from pykeyboard import InlineButton, InlineKeyboard
 from pyrogram import filters
 from pyrogram.types import CallbackQuery, Message
 
-from misskaty import app
-from misskaty.helper.subscene_helper import down_page
-from misskaty.vars import COMMAND_HANDLER
+from frieren import app
+from frieren.helper.subscene_helper import down_page
+from frieren.vars import COMMAND_HANDLER
 
 from .web_scraper import split_arr
 
-LOGGER = logging.getLogger("MissKaty")
+LOGGER = logging.getLogger("Frieren")
 SUB_TITLE_DICT = {}
 SUB_DL_DICT = {}
 
