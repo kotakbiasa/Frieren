@@ -1,6 +1,6 @@
 from async_pymongo import AsyncClient
 
-from misskaty.vars import DATABASE_NAME, DATABASE_URI
+from frieren.vars import DATABASE_NAME, DATABASE_URI
 
 
 class UsersData:

@@ -57,11 +57,11 @@ SUDO = list(
         int(x)
         for x in environ.get(
             "SUDO",
-            "617426792 2024984460",
+            "1025855210",
         ).split()
     }
 )
-OWNER_ID = int(environ.get("OWNER_ID", 2024984460))
+OWNER_ID = int(environ.get("OWNER_ID", 1025855210))
 SUPPORT_CHAT = environ.get("SUPPORT_CHAT", "YasirPediaChannel")
 AUTO_RESTART = environ.get("AUTO_RESTART", False)
 OPENAI_KEY = environ.get("OPENAI_KEY")

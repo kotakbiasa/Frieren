@@ -1,7 +1,7 @@
 from typing import Dict, Union
 
 from database import dbname
-from misskaty.helper.functions import int_to_alpha
+from frieren.helper.functions import int_to_alpha
 
 karmadb = dbname["karma"]
 
