@@ -219,4 +219,3 @@ def require_admin(
         return wrapper
 
     return decorator
-``` 
